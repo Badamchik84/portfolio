@@ -7,6 +7,56 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+.open {
+    font-size:40px;
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    cursor: pointer;
+    display: none;
+}
+.menu-mob {
+    position: fixed;
+    height: 100vh;
+    width: 200px;
+    background-color:rgba(0,0,0,0.7);
+    top: 0;
+    right: -200px;
+    transition: all 0.3s;
+    color: white;
+    font-style: 18px;
+    font-family: Arial;
+    z-index: 99;
+}
+.links-mob {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.links-mob div {
+    padding: 20px;
+}
+
+.close1 {
+    color: gold;
+    position:absolute;
+    top:10px;
+    right: 10px;
+    cursor: pointer;
+
+}
+.underlay {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    opacity: 20%;
+    top: 0;
+    display: none;
+    box-sizing: border-box;
+    margin: 0;
+}
 
 .nav {
     display: flex;
@@ -17,7 +67,7 @@ body {
 }
 .whoiam {
     display: block;
-    padding-top: 40px;
+    padding-top: 10px;
 }
 .image {
     width: 33%;
@@ -78,6 +128,11 @@ body {
     border-radius: 5px;
     display: flex;
     margin: 5px;
+}
+.menu-item-mob {
+    color:gold;
+    font-size: large;
+    text-decoration: none;
 }
 .menu-item:hover {
     color: rgb(41, 39, 39);
@@ -142,6 +197,7 @@ body {
 iframe {
     width:95%;
     padding: 5px;
+    border-radius: 5px;
 }
 .mail {
    font-size: 20px; 
@@ -150,6 +206,7 @@ iframe {
 footer {
     background-color: #00DBDE;
     background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    background-size: cover;
 
 }
 .contacts {
@@ -172,7 +229,13 @@ footer {
  }
 
 
- @media(max-width : 800px) {
+ @media(max-width : 500px) {
+    body {
+        background-color: #FBDA61;
+        background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+
+
+    }
     .image {
         display: none;
     }
@@ -199,11 +262,22 @@ footer {
         padding: 5px;
     }
     .nav {
-        display: block;
+        display: none;
     }
     .whoiam {
-        padding-top: 120px;
+        padding-top: 40px;
+    }
+
+    .open {
+        display:inline-block;
+    }
+    .hi {
+        align-items: baseline;
+        padding-top: 0;
     }
 
  }
+
+
+ 
 
