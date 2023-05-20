@@ -6,6 +6,29 @@
     <title>Portfolio</title>
 <div class="wrapper">
     <body>
+        <div class="open" onclick="show()">
+            &#9776;
+        </div>
+        <div class="menu-mob">
+            <div class="close1" onclick="hide()">
+                &#10006;
+            </div>
+            <div class="links-mob">
+                <div class="aboutme">
+                    <a href="#1" class="menu-item-mob" onclick="hide()">About me</a>
+                </div>
+                <div class="myskils">
+                    <a href="#2" class="menu-item-mob" onclick="hide()">My skills</a>
+                </div>
+                <div class="contacts1">
+                    <a href="#3" class="menu-item-mob" onclick="hide()">Contacts</a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="underlay"></div>
+
+        
         <div class="nav">
             <a href="#1" class="menu-item">About me</a>
             <a href="#2" class="menu-item">My skills</a>
@@ -80,3 +103,20 @@
     </body>
 </html>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js">
+</script>
+<script>
+    function show() {
+        $('.menu-mob').css('right','0');
+
+        $('.underlay').css('display','block');
+
+    }
+    function hide() {
+        $('.menu-mob').css('right','-200px');
+        $('.underlay').css('display','none');
+    }
+</script>
+
+    
